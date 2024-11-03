@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #010612;
+  color: #ffffff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #0a1531;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 2em 4em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.nav li {
+  display: inline;
+  margin: 0 1em;
+}
+
+.nav a {
+  color: #209bcc;
+  font-size: x-large;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover,
+a.active-page {
+  color: #ffffff;
+}
+
+.header-register {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background-color: #209bcc;
+  padding: 1em 2em;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: large;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background-color: #157499;
+}
+
+/* Homepage - Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  background: url(images/astro.jpg) no-repeat center center/cover;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 100px;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-content h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content p {
+  max-width: 80%;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #d1d1e0;
+  margin-top: 1rem;
+  padding: 0 1em;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content .btn-explore {
+  margin-top: 2rem;
+  background-color: #209bcc;
+  padding: 0.8em 2em;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero-content .btn-explore:hover {
+  background-color: #157499;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* End of hero */
+
+.home-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 70px;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 70px;
+}
+
+.sub-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.33%;
+  padding: 0 8em;
+}
+.sub-topic-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.sub-topic img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.sub-topic .description {
+  text-align: justify;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 70px 0;
+}
+.register-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  padding: 2.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5em;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.input-field input {
+  background: none;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  padding: 1em;
+  font-size: 1.1rem;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field input.error {
+  border: 2px solid #ff0000;
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.input-field input:focus {
+  border-color: #209bcc;
+}
+
+.btn-submit {
+  background-color: #209bcc;
+  padding: 1em 2em;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+}
+
+.btn-submit:hover {
+  background-color: #157499;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Sub topic pages */
+.main-content {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.main-content h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  color: #209bcc;
+}
+
+.video {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.main-content p {
+  max-width: 1050px;
+  text-align: center;
+  margin: 40px auto;
+  line-height: 1.6;
+  font-size: 1.3em;
+}
+
+/* Articles Section */
+.articles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  margin-bottom: 80px;
+  padding: 0 30px;
+  max-width: 80%;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #209bcc;
+  text-align: center;
+}
+
+/* Image and Text Wrapper */
+.article-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.article-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 100%;
+}
+/* Image styling */
+.article img {
+  flex: 0 0 400px;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Paragraph text styling */
+.article p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.article h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #209bcc;
+  text-align: center;
+}
+
+/* End of subtopic pages styling */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #0f3460;
+  color: #ffffff;
+  padding: 35px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #ffffff;
+  font-size: 1.5em;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #209bcc;
+}

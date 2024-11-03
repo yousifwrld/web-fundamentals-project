@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header class="header">
+        <!-- logo on the left side -->
+        <div class="logo">
+            <a href="home.html" class="logo"><img src="images/logo.png" alt="logo"></a>
+        </div>
+
+        <!-- navigation menu -->
+        <nav class="nav">
+            <ul>
+                <li><a class="active-page" href="Home.html">Home</a></li>
+                <li><a href="Home.html">Sub 1</a></li>
+                <li><a href="Home.html">Sub 2</a></li>
+                <li><a href="exploration-of-space.html">Exploration Of Space</a></li>
+                <li><a href="Home.html">Making of [website]</a></li>
+                <li><a href="Home.html">Our Story</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-register">
+            <a class="btn" href="home.html#register">Register Now!</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h2>Welcome to Galactic Gateway</h2>
+            <p>
+                Your cosmic adventure begins here. Traverse the extraordinary worlds of our solar system, learn about
+                the life-giving Sun and distant stars, and uncover the amazing achievements of space exploration that
+                have pushed the boundaries of human knowledge.
+            </p>
+            <p>
+                Let Galactic Gateway be your guide through the mysteries of space!
+            </p>
+            <a href="#explore-more" class="btn-explore">Start Exploring</a>
+        </div>
+    </section>
+
+    <main id="explore-more" class="home-content">
+        <div class="sub-topic">
+            <h3 class="sub-topic-title">Lorm ipsum dolor</h3>
+            <img src="images/telescope.jpg" alt="">
+            <p class="description">Lorem ipsum dolor sit amet consectetur. Consectetur viverra enim adipiscing leo
+                aliquam nunc non risus aliquet. Aliquet quam auctor id odio dignissim gravida ut. Tristique magna vitae
+                sit enim lobortis adipiscing viverra. Massa dictum tempus viverra aliquam. Vitae amet sed et risus sit
+                egestas id. Lorem ipsum dolor sit amet consectetur. Consectetur viverra enim adipiscing leo
+                aliquam nunc non risus aliquet. Aliquet quam auctor id odio dignissim gravida ut. Tristique magna vitae
+                sit enim lobortis adipiscing viverra. Massa dictum tempus viverra aliquam. Vitae amet sed et risus sit
+                egestas id.</p>
+        </div>
+        <div class="sub-topic">
+            <h3 class="sub-topic-title">Lorm ipsum dolor</h3>
+            <img src="images/telescope.jpg" alt="">
+            <p class="description">Lorem ipsum dolor sit amet consectetur. Consectetur viverra enim adipiscing leo
+                aliquam nunc non risus aliquet. Aliquet quam auctor id odio dignissim gravida ut. Tristique magna vitae
+                sit enim lobortis adipiscing viverra. Massa dictum tempus viverra aliquam. Vitae amet sed et risus sit
+                egestas id. Lorem ipsum dolor sit amet consectetur. Consectetur viverra enim adipiscing leo
+                aliquam nunc non risus aliquet. Aliquet quam auctor id odio dignissim gravida ut. Tristique magna vitae
+                sit enim lobortis adipiscing viverra. Massa dictum tempus viverra aliquam. Vitae amet sed et risus sit
+                egestas id.</p>
+        </div>
+        <div class="sub-topic">
+            <h3 class="sub-topic-title">Lorm ipsum dolor</h3>
+            <img src="images/telescope.jpg" alt="">
+            <p class="description">Lorem ipsum dolor sit amet consectetur. Consectetur viverra enim adipiscing leo
+                aliquam nunc non risus aliquet. Aliquet quam auctor id odio dignissim gravida ut. Tristique magna vitae
+                sit enim lobortis adipiscing viverra. Massa dictum tempus viverra aliquam. Vitae amet sed et risus sit
+                egestas id. Lorem ipsum dolor sit amet consectetur. Consectetur viverra enim adipiscing leo
+                aliquam nunc non risus aliquet. Aliquet quam auctor id odio dignissim gravida ut. Tristique magna vitae
+                sit enim lobortis adipiscing viverra. Massa dictum tempus viverra aliquam. Vitae amet sed et risus sit
+                egestas id.</p>
+        </div>
+    </main>
+
+
+    <div id="register" class="register-container">
+
+        <h2>Register Your Interest!</h2>
+
+        <form id="form" onsubmit="registerUser(event)">
+            <div class="input-field">
+                <input type="text" id="firstName" placeholder="First Name..." required>
+            </div>
+            <div class="input-field">
+                <input type="text" id="lastName" placeholder="Last Name..." required>
+            </div>
+            <div class="input-field">
+                <input type="tel" id="phoneNumber" placeholder="Phone Number..." required pattern="[0-9]{8}">
+            </div>
+
+            <p id="errorMessage" class="errorMessage"></p>
+            <button type="submit" class="btn-submit">Register</button>
+        </form>
+
+    </div>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>
+            &copy; 2024 Space Exploration. All rights reserved.
+        </h2>
+        <div class="social-links">
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

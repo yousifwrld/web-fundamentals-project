@@ -201,7 +201,8 @@ form {
   max-width: 600px;
   padding: 2.5em;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+  background-color: #030e29;
 }
 
 .input-field {
@@ -326,7 +327,7 @@ form {
 }
 /* Image styling */
 .article img {
-  flex: 0 0 400px;
+  flex: 0 0 600px;
   width: 400px;
   height: auto;
   border-radius: 10px;
@@ -334,7 +335,7 @@ form {
 
 /* Paragraph text styling */
 .article p {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.6;
   text-align: justify;
 }

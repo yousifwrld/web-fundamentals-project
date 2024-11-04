@@ -29,6 +29,8 @@ function registerUser(event) {
       "lastName"
     )}, your phone number is ${localStorage.getItem("phoneNumber")}`
   );
+
+  updateElements();
 }
 
 // Function to validate credentials and display appropriate message
@@ -79,3 +81,45 @@ function validateCredentials(firstName, lastName, phoneNumber) {
   // If all the inputs are valid, return true
   return true;
 }
+
+function updateElements() {
+  const firstName = localStorage.getItem("firstName");
+  const lastName = localStorage.getItem("lastName");
+  const phoneNumber = localStorage.getItem("phoneNumber");
+
+  const form = document.getElementById("form");
+  if (firstName && lastName && phoneNumber) {
+    // Hide the form and register button
+    if (form) {
+      form.style.display = "none";
+    }
+    document.getElementById("header-register-btn").style.display = "none";
+
+    // Remove the form header if it exists
+    const registerHeader = document.querySelector("#register h2");
+    if (registerHeader) {
+      registerHeader.style.display = "none";
+    }
+
+    // Add the welcome message
+    const headerRegisterDiv = document.getElementById("header-register");
+    const welcomeMessage = document.createElement("p");
+    welcomeMessage.textContent = `Welcome ${firstName} ${lastName}!`;
+    welcomeMessage.classList.add("welcome-message");
+    headerRegisterDiv.appendChild(welcomeMessage);
+  } else {
+    // Show the form and register button if the user is not signed in
+    document.getElementById("header-register-btn").style.display = "block";
+    form.style.display = "block";
+  }
+}
+
+updateElements();
+
+// Not used for now, might use later
+function logoutUser() {
+  localStorage.clear();
+  updateElements();
+}
+
+console.log("app.js loaded");

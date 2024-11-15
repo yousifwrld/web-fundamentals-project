@@ -107,10 +107,6 @@ function updateElements() {
     welcomeMessage.textContent = `Welcome ${firstName} ${lastName}!`;
     welcomeMessage.classList.add("welcome-message");
     headerRegisterDiv.appendChild(welcomeMessage);
-  } else {
-    // Show the form and register button if the user is not signed in
-    document.getElementById("header-register-btn").style.display = "block";
-    form.style.display = "block";
   }
 }
 
@@ -122,4 +118,26 @@ function logoutUser() {
   updateElements();
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const contentItems = document.querySelectorAll('.content-item');
+  
+  function changeSlide(direction) {
+      slides[(currentSlide + 1 + slides.length) % slides.length].classList.remove('nextImage');
+      slides[(currentSlide - 1 + slides.length) % slides.length].classList.remove('prevImage');
+      slides[currentSlide].classList.remove('active');
+      contentItems[currentSlide].classList.remove('active');
+  
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+  
+      slides[currentSlide].classList.add('active');
+      slides[(currentSlide + 1 + slides.length) % slides.length].classList.add('nextImage');
+      slides[(currentSlide - 1 + slides.length) % slides.length].classList.add('prevImage');
+      contentItems[currentSlide].classList.add('active');
+  }
+  // Attach click event listeners to the arrow buttons
+  document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+  document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+});
 console.log("app.js loaded");
